@@ -41,6 +41,7 @@ char	*ft_convert_winttochr(wint_t tmp);
 
 typedef struct			s_params
 {
+	char				flag[5];
 	char				args[17];
 	char				*(*args_f[17]) (va_list);
 	char				*buf;

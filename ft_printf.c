@@ -49,7 +49,9 @@ int		ft_printf(const char *str, ...)
 
 	p = (t_params*)malloc(sizeof(t_params));
 	fill_args_f(&p);
+	fill_flag(&p);
 	ft_strcpy(p->args, "sSpdDioOuUxXcCm%fF");	
+	ft_strcpy(p->flag, "# +-0");
 	va_start(ap, str);
 	p->i = -1;
 	p->buf = NULL;
@@ -76,6 +78,10 @@ int		ft_printf(const char *str, ...)
 		p->args_i = 0;
 		while (p->args[p->args_i])
 		{
+			if(str[(p->i) + 1] == p->flag[p->args_i]
+			{
+				//si oui verif si un ou plusieur flag
+			}
 			if (str[(p->i) + 1] == p->args[p->args_i])
 			{
 				p->tmp2 = p->args_f[p->args_i](ap);
