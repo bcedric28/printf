@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   testdie.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gvirga <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/15 14:12:58 by gvirga            #+#    #+#             */
-/*   Updated: 2018/06/20 17:08:15 by gvirga           ###   ########.fr       */
+/*   Created: 2018/12/04 20:59:47 by gvirga            #+#    #+#             */
+/*   Updated: 2018/12/05 14:58:57 by gvirga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
 
-int		ft_strequ(char const *s1, char const *s2)
+int		main(void)
 {
-	if (!s1 || !s2)
-		return (0);
-	if (ft_strcmp(s1, s2) == 0)
-		return (1);
+	printf("%0s\n", "Hello");
+	printf("%05s\n", "Hello");
+	printf("%0d\n", 10);
+	printf("%05d\n", 150);
+	printf("%0.5d\n", 10);
+	printf("%05x\n", 10);
+	printf("%06x\n", 1015);
 	return (0);
 }
